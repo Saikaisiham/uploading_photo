@@ -8,11 +8,12 @@ ENV PYTHONUNBUFFERED 1
 COPY . .
 
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y netcat\
     gcc \
     python3-dev \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
+
 
 RUN pip install --upgrade pip
 
